@@ -1,0 +1,318 @@
+body {
+	background-color: #fff;
+	margin: 0;
+	
+}
+
+.container {
+	width: 100%;
+}
+/*Navigation */	
+
+/* Add a background color to the top navigation */
+nav {
+  background-color: #85203e;
+  overflow: hidden;
+  
+  text-align: center;
+  
+}
+
+nav ul {
+	display: inline-block;
+	width:600px;
+	list-style-type: none;
+	margin: 0 auto;
+	
+	
+}
+
+/* Style the links inside the navigation bar */
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 17px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Nunito', sans-serif;
+  
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: #ff9497;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* header */
+
+.head-image {
+	background-image: url('pink-cake-header.jpg');
+	width: 100%;
+	height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-color: #ff9497;
+}
+
+.header-text {
+	text-align: center;
+	text-shadow: 2px 2px 3px #85203e;
+	width: 100%;
+	position: absolute;
+}
+
+.header-text h1 {
+	font-size: 6rem;
+	font-family: 'Allura', cursive;
+	color: white;
+}
+/* main content on all pages*/
+main {
+	max-width: 800px;
+	text-align: center;
+	margin: 0 auto;
+	min-height: 500px;
+}
+/* main headings */
+
+h2 {
+	font-size:3rem;
+	font-family: 'Allura', cursive;
+	
+}
+
+h3 {
+	font-size: 2.3rem;
+	font-family: 'Allura', cursive;
+}
+
+h4 {
+	font-size: 1.6rem;
+	font-family: 'Allura', cursive;
+	margin-bottom: 0px;
+}
+
+
+/* paragraphs*/
+p {
+	font-size: 1.1rem;
+	font-family: 'Nunito', sans-serif;
+}
+
+.nomargin {
+	margin-top: 0px;
+}
+
+/*öppettider sida*/ 
+
+/*table properties*/
+table {
+	min-width: 430px;
+	margin: 10px auto;
+	padding: 40px;
+	font-size: 1.1rem;
+		border-collapse: collapse;
+	
+}
+tr:nth-child(odd) {
+	background-color: #F0CCD7;
+	}
+	
+th {
+	font-size:3rem;
+	font-family: 'Allura', cursive;
+	background-color: #85203e;
+	color: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 5px 45px;
+}
+
+td {
+	font-family: 'Nunito', sans-serif;
+}
+
+/*Sortiment sida*/
+/*style link to look like a button*/
+
+.button {
+	background-color: #85203e;
+	color: white;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.1rem;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	width: 200px;
+	margin: 0 auto;
+}
+
+/* grid layout*/
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-gap: 10px;
+    padding: 10px;
+	justify-content: center;
+	
+} 
+
+.sortiment {
+	text-align: center;
+	
+}
+
+.festtårtor {
+	text-align: center;
+}
+
+
+/* stripy divs*/
+.red  {
+	background-color: #85203e;
+	min-height: 400px;
+	text-align: center;
+	color: white;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	
+	
+}
+
+.white {
+	background-color: white;
+	min-height: 400px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.text {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/*images*/
+.fest-img {
+	display: block;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.red .fest-img {
+	border: 10px double white;
+}
+
+.white .fest-img {
+	border: 10px double #85203e;
+}
+
+/*kontaktsida*/
+.kontaktsida {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.adress {
+	padding-left: 50px;
+}
+
+form {
+	width: 500px;
+}
+.kontaktformulär {
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.1rem;
+	margin: 20px auto;
+	
+	max-width: 1000px;
+		padding: 16px;
+	background: #F0CCD7;
+	}
+
+.kontaktformulär input[type="text"],
+.kontaktformulär input[type="email"],
+.kontaktformulär textarea {
+	outline: none;
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font-family: 'Nunito', sans-serif;
+}
+
+.kontaktformulär input[type="text"]:focus,
+.kontaktformulär input[type="email"]:focus,
+.kontaktformulär textarea:focus {
+	box-shadow: 0 0 5px #85203e;
+	padding: 3%;
+	border: 1px solid #85203e;
+}
+
+.kontaktformulär input[type="submit"]{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #85203e;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+border-bottom-style: none;	
+	color: #fff;
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.1rem;
+	
+}
+
+.kontaktformulär input[type="submit"]:hover {
+	cursor: pointer;
+}
+
+
+/* footer */
+footer {
+	background-color: #85203e;
+	color: #fff;
+	padding: 10px 12px;
+	height: 40px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 0.9rem;
+}
+
+footer a {
+	float:right;
+	margin: 0px 10px;
+}
+
+footer a img {
+	height: 40px;
+	border-radius: 50%
+	
+}
+/* media queries */
+
+
+	
+	
