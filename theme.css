@@ -13,9 +13,12 @@ body {
 nav {
   background-color: #85203e;
   overflow: hidden;
-  
   text-align: center;
-  
+}
+
+/* Hide Hamburger */
+nav label, #hamburger {
+  display: none;
 }
 
 nav ul {
@@ -23,8 +26,6 @@ nav ul {
 	width:600px;
 	list-style-type: none;
 	margin: 0 auto;
-	
-	
 }
 
 /* Style the links inside the navigation bar */
@@ -47,8 +48,38 @@ nav a:hover {
 
 /* Add a color to the active/current link */
 nav a.active {
-  background-color: #4CAF50;
-  color: white;
+    color: white;
+}
+
+@media screen and (max-width: 650px){
+  /* Show Hamburger */
+  nav label {
+    display: inline-block;
+    color: #fff;
+    background: #85203e;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    }
+  
+  /* Break down menu items into vertical */
+  nav ul  {
+    max-width: 95px;
+  }
+ 
+  nav a {
+    font-size: 0.9rem;
+    padding: 10px 5px;
+  }
+  
+
+  /* Toggle show/hide menu on checkbox click */
+  nav ul {
+    display: none;
+  }
+  nav input:checked ~ ul {
+    display: block;
+  }
 }
 
 /* header */
@@ -56,12 +87,13 @@ nav a.active {
 .head-image {
 	background-image: url('pink-cake-header.jpg');
 	width: 100%;
-	height: 300px;
+	height: 400px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
 	background-color: #ff9497;
+	border-bottom: 3px solid #85203e;
 }
 
 .header-text {
@@ -76,19 +108,59 @@ nav a.active {
 	font-family: 'Allura', cursive;
 	color: white;
 }
+
+/* header media queries*/
+@media only screen and (max-width: 900px) {
+	.head-image {
+		height: 250px;
+	}
+	.header-text h1 {
+		font-size: 5rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.head-image {
+		height: 200px;
+	}
+	.header-text h1 {
+		font-size: 4rem;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.head-image {
+		height: 150px;
+	}
+	.header-text h1 {
+		font-size: 3rem;
+	}
+}
+
 /* main content on all pages*/
-main {
+.main {
 	max-width: 800px;
 	text-align: center;
 	margin: 0 auto;
-	min-height: 500px;
+	padding-bottom: 20px;
 }
+
+@media only screen and (max-width: 900px) {
+	.main {
+		max-width: 80%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.main {
+		max-width: 90%;
+	}
+}
+
 /* main headings */
 
 h2 {
 	font-size:3rem;
 	font-family: 'Allura', cursive;
-	
 }
 
 h3 {
@@ -102,26 +174,98 @@ h4 {
 	margin-bottom: 0px;
 }
 
+/*main headings media queries*/
+
+@media only screen and (max-width: 900px) {
+	h2 {
+		margin-bottom: 20px;
+	}
+	h3 {
+		margin-bottom: 0px;
+	}
+}
+
+
+@media only screen and (max-width: 600px) {
+	h2 {
+		font-size: 2.5rem;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	h3 {
+		font-size: 2rem;
+		margin-bottom: 0px;
+	}
+}
+
 
 /* paragraphs*/
 p {
 	font-size: 1.1rem;
 	font-family: 'Nunito', sans-serif;
+	
+}
+
+@media only screen and (max-width: 600px) {
+	p {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	p {
+		font-size: 0.85rem;
+		max-width: 90%;
+		margin: 10px auto;
+	}
 }
 
 .nomargin {
 	margin-top: 0px;
 }
 
+/*index sida*/
+
+.vid {
+	margin: 50px auto;
+	
+}
+
+video {
+	max-width: 580px;
+	max-height: 330px;
+}
+
+/*video media queries*/
+@media only screen and (max-width: 700px) {
+	.vid {
+		margin: 20px auto;
+	}
+	video {
+		max-width: 420px;
+		max-height: 240px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.vid {
+		margin: 20px auto;
+	}
+	video {
+		max-width: 290px;
+		max-height: 165px;
+	}
+}
+
 /*öppettider sida*/ 
 
 /*table properties*/
 table {
-	min-width: 430px;
+	min-width: 420px;
 	margin: 10px auto;
 	padding: 40px;
 	font-size: 1.1rem;
-		border-collapse: collapse;
+	border-collapse: collapse;
 	
 }
 tr:nth-child(odd) {
@@ -144,6 +288,33 @@ td {
 	font-family: 'Nunito', sans-serif;
 }
 
+/*table media queries*/
+@media only screen and (max-width: 600px) {
+	table {
+		font-size: 1rem;
+	}
+	th {
+		font-size: 2.5rem;
+	}
+	table, th, td {
+		padding: 5px 35px;
+}
+}
+
+@media only screen and (max-width: 430px) {
+	table {
+		min-width: 250px;
+		font-size: 0.8rem;
+	}
+	th {
+		font-size: 1.6rem;
+	}
+	table, th, td {
+		padding: 5px 20px;
+}
+}
+
+
 /*Sortiment sida*/
 /*style link to look like a button*/
 
@@ -160,26 +331,56 @@ td {
 	text-align: center;
 	width: 200px;
 	margin: 0 auto;
-}
-
-/* grid layout*/
-
-.grid-container {
-	display: grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
-	grid-gap: 10px;
-    padding: 10px;
-	justify-content: center;
 	
+}
+@media only screen and (max-width: 600px) {
+	.button {
+		font-size: 1rem;
+	}
+} 
+@media only screen and (max-width: 400px) {
+	.button {
+		font-size: 0.85rem;
+	}
+} 
+
+/* flex layout*/
+
+.flex-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+    flex-direction: row;
+	justify-content: space-between;
+	margin-top: 3%;
+	margin-bottom: 3%;
 } 
 
 .sortiment {
+	display: inline-block;
+	flex: 1 200px;
+	padding: 10px;
 	text-align: center;
 	
 }
 
 .festtårtor {
 	text-align: center;
+	max-width: 800px;
+	margin: auto;
+	font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 600px) {
+	.festtårtor {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.festtårtor {
+		font-size: 0.85rem;
+	}
 }
 
 
@@ -189,8 +390,9 @@ td {
 	min-height: 400px;
 	text-align: center;
 	color: white;
-	display: grid;
-	grid-template-columns: 50% 50%;
+	padding-bottom: 10px;
+	display: flex;
+	flex-wrap: wrap;
 	
 	
 }
@@ -199,13 +401,32 @@ td {
 	background-color: white;
 	min-height: 400px;
 	text-align: center;
-	display: grid;
-	grid-template-columns: 50% 50%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
+
 .text {
-	padding-left: 50px;
-	padding-right: 50px;
+	flex: 1 350px;
+}
+
+.text p {
+	max-width: 80%;
+	margin: 20px auto;
+}
+
+
+.photo {
+	flex: 1 350px;
+}
+
+@media only screen and (max-width: 718px) {
+	.white .text{
+		order: 0;
+	}
+	.white .photo {
+		order: 1;
+	}
 }
 
 /*images*/
@@ -218,6 +439,21 @@ td {
 	
 }
 
+@media only screen and (max-width: 700px) {
+	.fest-img {
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.fest-img {
+		width: 60%;
+		height: 60%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+}
 .red .fest-img {
 	border: 10px double white;
 }
@@ -226,27 +462,54 @@ td {
 	border: 10px double #85203e;
 }
 
+.företag-img {
+	border: 10px double #85203e;
+	
+}
+
+@media only screen and (max-width: 400px) {
+	.företag-img {
+		width: 200px;
+	}
+}
+
 /*kontaktsida*/
 .kontaktsida {
-	display: grid;
-	grid-template-columns: 50% 50%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 3%;
+	margin-bottom: 3%;
 }
+
+
 
 .adress {
-	padding-left: 50px;
+	text-align: center;
+	flex: 1 350px;
+	margin-bottom: 100px;
 }
 
-form {
-	width: 500px;
+
+iframe {
+	width: 95%;
+	height: 65%;
+	
 }
+
+@media only screen and (max-width: 800px) {
+	form {
+		text-align: center;
+	}
+	
+}
+
 .kontaktformulär {
 	font-family: 'Nunito', sans-serif;
 	font-size: 1.1rem;
-	margin: 20px auto;
-	
-	max-width: 1000px;
-		padding: 16px;
-	background: #F0CCD7;
+	margin: 20px;
+	padding: 16px;
+	background: #ffb8ba;
+	flex: 1 350px;
 	}
 
 .kontaktformulär input[type="text"],
@@ -290,17 +553,24 @@ border-bottom-style: none;
 	cursor: pointer;
 }
 
-
 /* footer */
 footer {
 	background-color: #85203e;
 	color: #fff;
 	padding: 10px 12px;
-	height: 40px;
+	height: 50px;
 	font-family: 'Nunito', sans-serif;
 	font-size: 0.9rem;
 }
 
+footer p {
+	display: inline;
+}
+
+footer p a {
+	float: left;
+	color: white;
+}
 footer a {
 	float:right;
 	margin: 0px 10px;
@@ -311,7 +581,16 @@ footer a img {
 	border-radius: 50%
 	
 }
-/* media queries */
+
+@media only screen and (max-width: 500px) {
+	footer a img {
+		height: 25px;
+	}
+	footer {
+		font-size: 0.7rem;
+	}
+}
+
 
 
 	

@@ -16,6 +16,10 @@
 <div class="container">
 <header>
 <nav>
+
+<label for="hamburger">&#9776;</label>
+  <input type="checkbox" id="hamburger"/>
+  
 	<ul>
 	<li><a href="index.html">Hem</a></li>
 	<li><a href="oppetider.html">Öppettider</a></li>
@@ -42,14 +46,15 @@
 <p><strong>Telefon:</strong> 0700 070707</p>
 <p><strong>Email: </strong><a href="mailto:konditori@sottochelegant.se">konditori@sottochelegant.se</a></p>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27385.931888210518!2d18.037593321573954!3d59.325080515666166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f763119640bcb%3A0xa80d27d3679d7766!2sStockholm!5e0!3m2!1sen!2sse!4v1575190681286!5m2!1sen!2sse" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27385.931888210518!2d18.037593321573954!3d59.325080515666166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f763119640bcb%3A0xa80d27d3679d7766!2sStockholm!5e0!3m2!1sen!2sse!4v1575190681286!5m2!1sen!2sse"  style="border:0;" allowfullscreen=""></iframe>
 	</div>
+	
 <div class="kontaktformulär">
-	<form action="" method="post">
-	<label>Namn:<input type="text" name="namn" /></label><br><br>
-	<label>Email:<input type="email" name="email" /></label><br><br>
-	<label>Telefonnummer:<input type="text" name="telefonnummer" /></label><br><br>
-	<label>Meddelande:<textarea name="meddelande" placeholder="Skriv ditt meddelande här" cols="30" rows="4"></textarea></label><br><br>
+	<form method="post">
+	<label>Namn:<input type="text" name="namn" required /></label><br>
+	<label>Email:<input type="email" name="email" required/></label><br>
+	<label>Telefonnummer:<input type="text" name="telefonnummer" required/></label><br>
+	<label>Meddelande:<textarea name="meddelande" required placeholder="Skriv ditt meddelande här" cols="30" rows="4"></textarea></label><br>
 	<input type="submit" value="Sänd" />
 
 </form>
@@ -58,10 +63,13 @@
 
 
 
-<footer>&copy; 2019 Sött och Elegant
+<footer>
+<p>&copy; 2019 Sött och Elegant</p>
 <a href="https://www.facebook.com/" target="_blank"><img src="images/socialmedia/facebook-pink.png" alt="facebook logo"></a>
 <a href="https://www.instagram.com" target="_blank"><img src="images/socialmedia/instagram-pink.png" alt="instagram logo"></a>
 <a href="https://www.twitter.com" target="_blank"><img src="images/socialmedia/twitter-pink.png" alt="twitter logo"></a>
+<br>
+<p><a href="dataskyddspolicy.pdf">GDPR policy</a></p>
 </footer>
 </div>
 </body>
